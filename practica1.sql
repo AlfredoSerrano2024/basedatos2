@@ -1,1 +1,27 @@
+--Crearemos una tabla para probar  el poder de pl sql
 
+create table dance(id_dance integer, nombre varchar2(40), edad integer);
+
+--PRENDEMOS EL SERVIDOR EN MODO DESARROLLADOR
+
+SET SERVEROUTPUT ON;
+
+--VAMOS A EMPEZAR UN BLOQUE LS SQL
+
+DECLARE 
+--AQUI SE DECLARAN LAS VARIABLES A USARSE 
+
+EDAD INTEGER;
+YEARS INTEGER;
+BEGIN
+--AQUI VA LA LOGICA DEL PROGRAMA
+
+YEARS:=24;
+EDAD:=YEARS*365;
+
+
+--PARA IMPRIMIR:
+DBMS_OUTPUT.PUT_LINE('TU EDAD EN DIAS ES' ||EDAD);
+
+END;
+/
