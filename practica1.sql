@@ -50,3 +50,11 @@ ID_PELICULA INTEGER,
 HORARIO VARCHAR2(8),
 CONSTRAINT PK_ID_HORARIO PRIMARY KEY(ID_HORARIO),
 CONSTRAINT FK1_ID_PELICULA FOREIGN KEY(ID_PELICULA) REFERENCES PELICULA(ID_PELICULA));
+
+create sequence sec_pelicula
+start with 1
+increment by 1
+nomaxvalue; 
+
+--para asociarla se necesita un nuevo objeto de base de datos, este objeto va a ser el que insertara el o los nuevos registros en la tabla pelicula:
+--JAMAS se usara un insert into en oracle cuando tiene un orimary key auto-generado
